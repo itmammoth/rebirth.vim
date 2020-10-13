@@ -1,2 +1,46 @@
 # rebirth.vim
-TODO
+
+rebirth.vim is a plugin to restore the window size and position on starting your gvim. (Typically for Windows)
+
+# Installation
+
+## vim-plug
+
+Add the following code to your `.vimrc`.
+
+```
+Plug 'itmammoth/rebirth.vim'
+```
+
+Nothing else to do!
+
+# Configurable variables
+
+## g:rebirth_file
+
+Set rebirth file path to store the window size and position on `VimLeavePre`.
+
+(default: `~/.rebirth.vim`)
+
+```
+" example
+let g:rebirth_file = expand('~/.vimfiles/.rebirth.vim')
+```
+
+# Command
+
+## :RebirthRestore
+
+Restore window size and position manually.
+
+# Contribution
+
+Just fork it. `blankslate.g?vimrc` are essential vim script files for testing.
+
+```bash
+$ gvim -u blankslate.vimrc -U blankslate.gvimrc
+```
+
+# License
+
+MIT License
