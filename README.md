@@ -18,7 +18,7 @@ Nothing else to do!
 
 ## g:rebirth_file
 
-Set rebirth file path to store the window size and position on `VimLeavePre`.
+Set the rebirth file path to store the window size and position on `VimLeavePre`.
 
 (default: `~/.rebirth.vim`)
 
@@ -31,7 +31,7 @@ let g:rebirth_file = expand('~/.vimfiles/.rebirth.vim')
 
 ## :RebirthRestore
 
-Restore window size and position manually.
+Restore the window size and position from the rebirth file manually.
 
 # Contribution
 
