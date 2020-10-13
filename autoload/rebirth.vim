@@ -1,15 +1,15 @@
 function! rebirth#store()
-  if !filewritable(g:rebirth_file)
-    call s:show_error("Can't write rebirth file to " . g:rebirth_file)
-    return
-  endif
-
   let l:body = [
     \ 'set columns=' . &columns,
     \ 'set lines=' . &lines,
     \ 'winpos ' . getwinposx() . ' ' . getwinposy(),
     \ ]
-  call writefile(l:body, g:rebirth_file)
+  try
+    call writefile(l:body, g:rebirth_file)
+  catch
+    call s:show_error('Failed to write rebirth file to ' . g:rebirth_file)
+    call input('Press enter key.')
+  endtry
 endfunction
 
 function! rebirth#restore()
