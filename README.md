@@ -9,7 +9,9 @@ rebirth.vim is a plugin to restore the window size and position on starting your
 Add the following code to your `.vimrc`.
 
 ```
-Plug 'itmammoth/rebirth.vim'
+if has('win32') || has('win64')
+  Plug 'itmammoth/rebirth.vim'
+endif
 ```
 
 Nothing else to do!
